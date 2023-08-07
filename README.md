@@ -50,9 +50,12 @@ you browser to see if the project is running.
 ## Add MUI v5
 Install the following packages:
 ```bash
-pnpm add @mui/material  @mui/icons-material @emotion/react @emotion/styled
+pnpm add @mui/material  @mui/icons-material @emotion/react @emotion/styled @emotion/cache
 ```
 
 
+# Docker Setup
 
+Run `docker buildx build -t my-next-app .`
+Use `docker compose run -d` to start the container with the docker compose configuration.
 

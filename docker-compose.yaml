@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  my-next-app:
+    container_name: my-next-app
+    image: my-next-app
+    ports:
+      - 3000:3000
+    restart: unless-stopped 
+    deploy:
+      resources:
+        limits:
+          memory: 500m
