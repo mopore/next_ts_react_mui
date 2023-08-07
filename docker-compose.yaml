@@ -5,7 +5,7 @@ services:
     container_name: my-next-app
     image: my-next-app
     ports:
-      - 3000:3000
+      - 80:3000
     restart: unless-stopped 
     deploy:
       resources:
