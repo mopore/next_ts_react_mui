@@ -1,29 +1,21 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import { BackendButton } from "./components/BackendButton";
-import backend from "./services/Backend";
 
-
-export default async function Home() {
-	return (
-	<>
-		<header>
-		</header>
-		<main>
+export default function Page() {
+	return(
+		<>
+			<main>
 			<div>
 				<Container maxWidth="sm">
 					<Typography variant="h2" align="center" color="textPrimary" gutterBottom>
-						Project Root
+						Welcome at the Backyard
 					</Typography>     
 					<div>
 						<Grid container spacing={2} justifyContent="center">
 							<Grid item>
-								<BackendButton serverAction={backend.helloAction} />
-							</Grid>
-							<Grid item>
-								<Link href="/backyard">
+								<Link href="/"> 
 									<Button variant="outlined" color="primary">
-										Backyard
+										Back to the Root
 									</Button>
 								</Link>
 							</Grid>
@@ -31,7 +23,7 @@ export default async function Home() {
 					</div>
 				</Container>
 			</div>
-		</main>
-	</>
-	);
+		</main>	
+		</>
+	)
 }
