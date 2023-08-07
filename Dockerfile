@@ -11,15 +11,6 @@ RUN pnpm install
 COPY . .
 RUN pnpm run build
 
-# Serve the Next.js app using Nginx
-FROM nginx:alpine
+EXPOSE 3000
 
-# Copy over the built app from the previous stage
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Use a custom Nginx configuration
-# COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["pnpm", "run", "start"]
