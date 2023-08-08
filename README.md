@@ -1,3 +1,4 @@
+ ```
  _____                    _       _       
 |_   _|__ _ __ ___  _ __ | | __ _| |_ ___ 
   | |/ _ \ '_ ` _ \| '_ \| |/ _` | __/ _ \
@@ -5,6 +6,8 @@
   |_|\___|_| |_| |_| .__/|_|\__,_|\__\___|
                    |_|                    
 ==========================================
+```
+# Template for Next.js 13 + Typescript + React + MUI v5
 
 This template project features the following technologies:
 - Next.js 13
