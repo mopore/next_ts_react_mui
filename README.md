@@ -1,5 +1,10 @@
-Next.js 13 Template Project
-===========================
+ _____                    _       _       
+|_   _|__ _ __ ___  _ __ | | __ _| |_ ___ 
+  | |/ _ \ '_ ` _ \| '_ \| |/ _` | __/ _ \
+  | |  __/ | | | | | |_) | | (_| | ||  __/
+  |_|\___|_| |_| |_| .__/|_|\__,_|\__\___|
+                   |_|                    
+==========================================
 
 This template project features the following technologies:
 - Next.js 13
@@ -7,7 +12,7 @@ This template project features the following technologies:
 - React
 - MUI v5
 
-It does not include Tailwind CSS.
+It does not include the use of Tailwind CSS (for compatibility reasons)
 
 
 ## Getting Started
