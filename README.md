@@ -61,6 +61,15 @@ Install the following packages:
 pnpm add @mui/material  @mui/icons-material @emotion/react @emotion/styled @emotion/cache
 ```
 
+# Visual Studio Code
+
+## Launch configurations (for debugging)
+You can use three different launch configurations:
+1. Next.js: debug server-side
+2. Next.js: debug client-side
+3. Next.js: debug full stack
+
+Source: https://tymick.me/blog/debug-nextjs-with-vs-code
 
 # Docker Setup
 
