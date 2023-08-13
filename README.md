@@ -20,7 +20,17 @@ It does not include the use of Tailwind CSS (for compatibility reasons)
 
 ## Getting Started
 
-First, run the development server:
+Install pnpm (if not already installed)
+```bash
+npm install -g pnpm
+```
+
+Install the dependencies:
+```bash
+pnpm install
+```
+
+Run the development server from console or via VSC launch configuration (see below):
 
 ```bash
 pnpm dev
@@ -29,9 +39,28 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-# Template Creation - Step by step
-Up to 2023-08-07 it was not yet possible to get the combination of technologies for this project
-without manual intervation.
+## Launch configurations (for debugging)
+You can use three different launch configurations:
+1. Next.js: debug server-side
+2. Next.js: debug client-side
+3. Next.js: debug full stack
+
+Source: https://tymick.me/blog/debug-nextjs-with-vs-code
+
+
+# Docker Setup
+A Dockerfile is included to build a production image of the project.
+An additional docker-compose file is included to start the container on port 80.
+
+Run `docker buildx build -t my-next-app .`
+Use `docker compose run -d` to start the container with the docker compose configuration.
+Check the container running with the URL http://localhost
+
+
+# MUI v5 with Next.js 
+Up to 2023-08-07 it was not yet possible to get the combination of technologies for this 
+project without manual intervation.
+The following describes the already executed steps to have MUI v5 with Next.js working
 I followed this guide: https://www.youtube.com/watch?v=w0A08C79bgU
 [GitHub Repo with sample code](https://github.com/SimulShift/Next13-App-Router-And-Mui5-Example)
 
@@ -61,18 +90,7 @@ Install the following packages:
 pnpm add @mui/material  @mui/icons-material @emotion/react @emotion/styled @emotion/cache
 ```
 
-# Visual Studio Code
-
-## Launch configurations (for debugging)
-You can use three different launch configurations:
-1. Next.js: debug server-side
-2. Next.js: debug client-side
-3. Next.js: debug full stack
-
-Source: https://tymick.me/blog/debug-nextjs-with-vs-code
-
-# Docker Setup
-
-Run `docker buildx build -t my-next-app .`
-Use `docker compose run -d` to start the container with the docker compose configuration.
-
+## Further addaptions following the tutorial
+- `layout.tsx`
+- `theme/EmotionCache.tsx`
+- `theme/ThemeRegistry.tsx`
