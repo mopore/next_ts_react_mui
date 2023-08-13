@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@mui/material";
+import jniStyles from "@/styles/jni_styles";
 
 type BackenButtonProps = {
 	serverAction: () => void
@@ -19,6 +20,7 @@ export function BackendButton({ serverAction }: BackenButtonProps) {
 				id="server-button"
 				variant="contained"
 				onClick={() => handleClick()}
+				sx={jniStyles.redBgHoverTransition}
 			>Call Server
 			</Button>
 		</>

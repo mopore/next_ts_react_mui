@@ -2,17 +2,17 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { BackendButton } from "./components/BackendButton";
 import backend from "./services/Backend";
+import jniStyles from "@/styles/jni_styles";
 
 
 export default async function Home() {
 	return (
 	<>
-		<header>
-		</header>
+		<header/>
 		<main>
 			<Box>
 				<Container maxWidth="sm">
-					<Typography variant="h2" align="center" color="textPrimary" gutterBottom>
+					<Typography sx={jniStyles.pageTitle}>
 						Project Root
 					</Typography>     
 					<Box>
@@ -23,7 +23,7 @@ export default async function Home() {
 							<Grid item>
 								<Link href="/backyard">
 									<Button variant="outlined" color="primary">
-										Backyard
+										To backyard
 									</Button>
 								</Link>
 							</Grid>

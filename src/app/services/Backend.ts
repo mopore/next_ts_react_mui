@@ -19,6 +19,7 @@ const backend = {
 		"use server";
 
 		console.log(`Received 'name' from form: ${data.get("name")}`);
+		console.log(`Received 'number_category' from form: ${data.get("number_category")}`);
 
 		redirect("/");
 	},
