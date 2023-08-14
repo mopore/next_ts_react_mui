@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { ExampleForm, StringKeyedObject } from "../shared/form_types";
-import paths from "../shared/Paths";
+import paths from "../shared/paths";
 
 
 const EXAMPLE_FETCH_URL = "https://jsonplaceholder.typicode.com/todos/1" as const;

@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import { BackendButton } from "./components/BackendButton";
-import backend from "./services/Backend";
+import BackendButton from "./components/BackendButton";
+import backend from "./services/backend";
 import jniStyles from "@/styles/jni_styles";
 import paths from "./shared/paths";
 

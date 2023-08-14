@@ -8,7 +8,7 @@ type BackenButtonProps = {
 	serverAction: () => Promise<void>
 };
 
-export function BackendButton({ serverAction }: BackenButtonProps) {
+const BackendButton = ({ serverAction }: BackenButtonProps) => {
 	const [showLoadingBackdrop, setShowLoadingBackdrop] = React.useState<boolean>(false);
 
 	const handleClick = async (): Promise<void> => {
@@ -36,3 +36,5 @@ export function BackendButton({ serverAction }: BackenButtonProps) {
 		</>
 	);
 }
+
+export default BackendButton;
