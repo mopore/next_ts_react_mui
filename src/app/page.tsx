@@ -9,7 +9,6 @@ import paths from "./shared/paths";
 export default async function Home() {
 	return (
 	<>
-		<header/>
 		<main>
 			<Box>
 				<Container maxWidth="sm">

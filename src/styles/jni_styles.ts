@@ -1,5 +1,6 @@
 import { SxProps, Theme, } from "@mui/material";
 
+// Color Palette: https://mui.com/system/palette/
 // Overview of sx props: https://mui.com/system/getting-started/the-sx-prop/
 
 const jniStyles : Record<string, SxProps<Theme> | undefined> = {
@@ -16,6 +17,7 @@ const jniStyles : Record<string, SxProps<Theme> | undefined> = {
 		typography: 'h2',
 		color: 'text.primary',
 		textAlign: 'center',
+		paddingTop: '1rem',
 		paddingBottom: '1rem',
 	},
 }
