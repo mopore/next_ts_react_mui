@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BackendButton } from "./components/BackendButton";
 import backend from "./services/Backend";
 import jniStyles from "@/styles/jni_styles";
+import paths from "./shared/paths";
 
 
 export default async function Home() {
@@ -21,7 +22,7 @@ export default async function Home() {
 								<BackendButton serverAction={backend.helloActionAsync} />
 							</Grid>
 							<Grid item>
-								<Link href="/backyard">
+								<Link href={paths.backyard}>
 									<Button variant="outlined" color="primary">
 										To backyard
 									</Button>

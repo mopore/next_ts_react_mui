@@ -2,7 +2,7 @@ export interface StringKeyedObject {
 	[key: string]: any;
 }
 
-export interface Example extends StringKeyedObject {
+export interface ExampleForm extends StringKeyedObject {
 	name: string;
 	number_category: number;
 }

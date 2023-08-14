@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, InputLabel, MenuItem, OutlinedInput, Sele
 import Link from "next/link";
 import jniStyles from "@/styles/jni_styles";
 import backend from "../services/Backend";
+import paths from "../shared/Paths";
 
 const NUMBER_CATEGORIES: readonly number[] = Object.freeze([
 	10, 
@@ -26,7 +27,7 @@ const Page = () => {
 								justifyContent="center"
 							>
 								<Grid item>
-									<Link href="/"> 
+									<Link href={paths.home}> 
 										<Button variant="outlined" color="primary">
 											To Project Root
 										</Button>

@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
-import { Example, StringKeyedObject } from "../types/Example";
+import { ExampleForm, StringKeyedObject } from "../shared/form_types";
+import paths from "../shared/Paths";
 
 
 const EXAMPLE_FETCH_URL = "https://jsonplaceholder.typicode.com/todos/1" as const;
@@ -48,11 +49,11 @@ const backend = {
 
 		console.log("Simulating form parsing...");
 		await sleepAsync(1500);
-		const example = fromFormData<Example>(formData);
+		const example = fromFormData<ExampleForm>(formData);
 		console.log(`Received 'name' from form: ${example.name}`);
 		console.log(`Received 'number_category' from form: ${example.number_category}`);
 
-		redirect("/");
+		redirect(paths.home);
 	},
 
 }
