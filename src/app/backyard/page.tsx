@@ -32,6 +32,19 @@ const Page = () => {
 						</Box>
 						<Box sx={{ mt: 5 }}/>
 						<ExampleForm formAction={backend.parseFormAsync} />
+
+						{/* Without a component: */}
+						{/* <form action={formAction}>
+							<TextField
+								required
+								id="person-form-name"
+								label="Required"
+								name="name"
+								defaultValue="Name of the person"
+								sx={{ width: '100%' }}
+							/>
+						</form> */}
+
 					</Container>
 				</Box>
 			</main>	
