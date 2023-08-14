@@ -1,9 +1,9 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import BackendButton from "./components/BackendButton";
-import backend from "./services/backend";
+import BackendButton from "../components/BackendButton";
 import jniStyles from "@/styles/jni_styles";
-import paths from "./shared/paths";
+import paths from "../shared/paths";
+import backend from "@/services/backend";
 
 
 export default async function Home() {

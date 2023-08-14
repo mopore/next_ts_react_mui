@@ -1,9 +1,9 @@
 import { Box, Button, Container, Grid, InputLabel, MenuItem, OutlinedInput, Select, Stack, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import jniStyles from "@/styles/jni_styles";
-import backend from "../services/backend";
-import paths from "../shared/paths";
-import ExampleForm from "../components/ExamleForm";
+import paths from "../../shared/paths";
+import ExampleForm from "../../components/ExamleForm";
+import backend from "@/services/backend";
 
 
 const Page = () => {
