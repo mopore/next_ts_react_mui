@@ -57,10 +57,13 @@ const ExampleForm = ({ formAction }: BackenButtonProps) => {
 						<TextField
 							required
 							id="person-form-name"
-							label="Required"
+							label="Name"
 							name="name"
 							defaultValue="Name of the person"
 							sx={{ width: '100%' }}
+							onFocus={event => {
+								event.target.select();
+							}}
 						/>
 					</Grid>
 					<Grid item xs={12} md={6}>

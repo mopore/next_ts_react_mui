@@ -6,7 +6,7 @@ import { SxProps, Theme, } from "@mui/material";
 const jniStyles : Record<string, SxProps<Theme> | undefined> = {
 	redBgHoverTransition : {
 	  '&:hover': {
-	    backgroundColor: "#ff0000",
+	    backgroundColor: "secondary.main",
 	  },
 	  transition: (theme: Theme) => theme.transitions.create('background-color', {
 	    // duration: theme.transitions.duration.standard,

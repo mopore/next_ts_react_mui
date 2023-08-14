@@ -3,12 +3,12 @@ import { Box, Link, Typography } from '@mui/material';
 const JniFooter = () => {
 	return (
 		<Box sx={{ 
-			bgcolor: 'secondary.main', 
+			bgcolor: 'background.paper', 
 			p: 1, 
 			position: 'fixed', 
 			bottom: 0, 
 			width: '100%', 
-			color: '#fff' 
+			color: 'secondary.main' 
 		}}
 		>
 			<Typography variant="body1" align="center">
