@@ -33,7 +33,7 @@ const Page = () => {
 						<Box sx={{ mt: 5 }}/>
 						<ExampleForm formAction={backend.parseFormAsync} />
 
-						{/* Without a component: */}
+						{/* Without an interactive client-side component (just server): */}
 						{/* <form action={formAction}>
 							<TextField
 								required
