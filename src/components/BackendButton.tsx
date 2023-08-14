@@ -3,6 +3,8 @@
 import { Backdrop, Button, CircularProgress } from "@mui/material";
 import jniStyles from "@/styles/jni_styles";
 import React from "react";
+import { useMessageBoardContext } from "./messageboard/MessageBoardContext";
+import MessageBoardState from "./messageboard/MessageBoardState";
 
 type BackenButtonProps = {
 	serverAction: () => Promise<void>
@@ -10,11 +12,20 @@ type BackenButtonProps = {
 
 const BackendButton = ({ serverAction }: BackenButtonProps) => {
 	const [showLoadingBackdrop, setShowLoadingBackdrop] = React.useState<boolean>(false);
+	const {setMessageBoardState} = useMessageBoardContext();
 
 	const handleClick = async (): Promise<void> => {
 		console.log("Hello from the client");
 		setShowLoadingBackdrop(true);
-		await serverAction();
+		try {
+			await serverAction();
+			setMessageBoardState(MessageBoardState.createInfo("Sever called."));
+		} catch (error) {
+			const errMessage = `Error calling server: ${error}`;
+			console.error(errMessage);
+			console.trace();
+			setMessageBoardState(MessageBoardState.createError(errMessage));
+		}
 		setShowLoadingBackdrop(false);
 	};
 

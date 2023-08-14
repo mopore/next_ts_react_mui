@@ -3,6 +3,8 @@
 import { Backdrop, Button, CircularProgress, Grid, MenuItem, Select, Stack, TextField, Typography } from "@mui/material";
 import jniStyles from "@/styles/jni_styles";
 import React from "react";
+import MessageBoardState from "./messageboard/MessageBoardState";
+import { useMessageBoardContext } from "./messageboard/MessageBoardContext";
 
 
 const NUMBER_CATEGORIES: readonly number[] = Object.freeze([
@@ -17,6 +19,7 @@ type BackenButtonProps = {
 
 const ExampleForm = ({ formAction }: BackenButtonProps) => {
 	const [showLoadingBackdrop, setShowLoadingBackdrop] = React.useState<boolean>(false);
+	const {setMessageBoardState} = useMessageBoardContext();
 
 	const handleClick = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
 		event.preventDefault();  // Prevent default form submission
@@ -32,6 +35,16 @@ const ExampleForm = ({ formAction }: BackenButtonProps) => {
 			console.error("Error while submitting form: ", error);
 		}
 
+		setShowLoadingBackdrop(true);
+		try {
+			await await formAction(formData);
+			setMessageBoardState(MessageBoardState.createSuccess("Successfully parsed form data"));
+		} catch (error) {
+			const errMessage = `Error while parsing form data: ${error}`;
+			console.error(errMessage);
+			console.trace();
+			setMessageBoardState(MessageBoardState.createError(errMessage));
+		}
 		setShowLoadingBackdrop(false);
 	};
 

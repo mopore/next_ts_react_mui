@@ -4,6 +4,8 @@ import ThemeRegistry from '@/theme/ThemeRegistry'
 import { Inter } from 'next/font/google'
 import JniFooter from '../components/JniFooter'
 import JniAppBar from '../components/JniAppBar'
+import { MessageBoardProvider } from '@/components/messageboard/MessageBoardProvider'
+import MessageBoard from '@/components/messageboard/MessageBoard'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,10 +24,11 @@ export default function RootLayout({
 			<ThemeRegistry>
 				<body className={inter.className}>
 					<JniAppBar />
-					{children}
-					<footer>
-						<JniFooter />
-					</footer>
+					<MessageBoardProvider>
+						<MessageBoard />
+						{children}
+					</MessageBoardProvider>
+					<JniFooter />
 				</body>
 			</ThemeRegistry>
 		</html>
