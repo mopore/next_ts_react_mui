@@ -10,6 +10,7 @@ const NUMBER_CATEGORIES: readonly number[] = Object.freeze([
 	20, 
 	30
 ] as const);
+
 type BackenButtonProps = {
 	formAction: (formData: FormData) => Promise<void>
 };
@@ -17,16 +18,26 @@ type BackenButtonProps = {
 const ExampleForm = ({ formAction }: BackenButtonProps) => {
 	const [showLoadingBackdrop, setShowLoadingBackdrop] = React.useState<boolean>(false);
 
-	const handleClick = async (): Promise<void> => {
+	const handleClick = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+		event.preventDefault();  // Prevent default form submission
+
 		console.log("Hello from the client");
 		setShowLoadingBackdrop(true);
-		// await formAction();
+
+		const formData = new FormData(event.currentTarget);  // Grab form data
+
+		try {
+			await formAction(formData);
+		} catch (error) {
+			console.error("Error while submitting form: ", error);
+		}
+
 		setShowLoadingBackdrop(false);
 	};
 
 	return (
 		<>
-			<form action={formAction}>
+			<form onSubmit={handleClick}>
 				<Grid 
 					container 
 					spacing={2} 
@@ -57,6 +68,7 @@ const ExampleForm = ({ formAction }: BackenButtonProps) => {
 							id="person-form-number"
 							name="number_category"
 							sx={{ width: '100%' }}	
+							defaultValue={""}
 						>
 							<MenuItem value="">
 								<em>None</em>

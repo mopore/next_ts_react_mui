@@ -38,7 +38,7 @@ const backend = {
 		console.log("Performing call on backend...");
 
 		// Perform an example fetch
-		await sleepAsync(1500);
+		await sleepAsync(500);
 		const result = await fetch(EXAMPLE_FETCH_URL)
 		const json = await result.json();
 		console.log(json);
@@ -48,7 +48,7 @@ const backend = {
 		"use server";
 
 		console.log("Simulating form parsing...");
-		await sleepAsync(1500);
+		await sleepAsync(500);
 		const example = fromFormData<ExampleForm>(formData);
 		console.log(`Received 'name' from form: ${example.name}`);
 		console.log(`Received 'number_category' from form: ${example.number_category}`);
