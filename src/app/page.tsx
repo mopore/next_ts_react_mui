@@ -21,11 +21,9 @@ export default async function Home() {
 								<BackendButton serverAction={backend.helloActionAsync} />
 							</Grid>
 							<Grid item>
-								<Link href={paths.backyard}>
-									<Button variant="outlined" color="primary">
-										To backyard
-									</Button>
-								</Link>
+								<Button href={paths.backyard} variant="outlined">
+									To backyard
+								</Button>
 							</Grid>
 						</Grid>
 					</Box>

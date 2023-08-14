@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import RenderSwitch from '../RenderSwitch';
 import { Alert, AlertTitle, Box, Collapse, IconButton } from '@mui/material';
 import { useMessageBoardContext } from './MessageBoardContext';
 import CloseIcon from '@mui/icons-material/Close';
@@ -20,18 +19,23 @@ const MessageBoard: React.FC<MessageBoardProops> = ( {  }) => {
 	return (
 		<>
 			<Box sx={{ width: '100%' }}>
-				<Collapse in={showState}>
+				{showState && (
 					<Alert 
 						severity={messageBoardState.severity} 
 						sx={{width: '100%'}}
+						onClick={() => {  // <-- Add this onClick handler
+							setShowState(false);
+							setMessageBoardState((prev) => MessageBoardState.hide(prev));
+						}}
 						action={
 							<IconButton
 								aria-label="close"
 								color="inherit"
-								size="small"
-								onClick={() => {
-									setMessageBoardState(MessageBoardState.createEmpty());
+								size="large"
+								onClick={(e) => {
+									e.stopPropagation();	
 									setShowState(false);
+									setMessageBoardState((prev) => MessageBoardState.hide(prev));
 								}}
 							>
 							  <CloseIcon fontSize="inherit" />
@@ -42,7 +46,7 @@ const MessageBoard: React.FC<MessageBoardProops> = ( {  }) => {
 						<AlertTitle>{messageBoardState.title}</AlertTitle>
 						{messageBoardState.message}
 					</Alert>
-				</Collapse>
+				)}
 			</Box>
 		</>
 	);

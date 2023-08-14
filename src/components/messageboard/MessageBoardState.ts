@@ -37,4 +37,8 @@ export default class MessageBoardState {
 	static createError(message: string): MessageBoardState {
 		return new MessageBoardState("Error", message, true, MessageTypes.ERROR);
 	}
+
+	static hide(state: MessageBoardState): MessageBoardState {
+		return new MessageBoardState(state.title, state.message, false, state.severity);
+	}
 }

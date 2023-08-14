@@ -22,11 +22,9 @@ const Page = () => {
 								justifyContent="center"
 							>
 								<Grid item>
-									<Link href={paths.home}> 
-										<Button variant="outlined" color="primary">
-											To Project Root
-										</Button>
-									</Link>
+									<Button href={paths.home} variant="outlined" color="primary">
+										To Project Root
+									</Button>
 								</Grid>
 							</Grid>
 						</Box>

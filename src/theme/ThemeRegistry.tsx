@@ -37,7 +37,6 @@ const themeOptions: ThemeOptions = {
         },
         divider: "#333333",  // A darker divider which is subtle
     },
-	components: {},
 };
 
 const theme = createTheme(themeOptions);
