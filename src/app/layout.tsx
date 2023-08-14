@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import ThemeRegistry from '@/theme/ThemeRegistry'
 import { Inter } from 'next/font/google'
-import Footer from '../components/Footer'
+import JniFooter from '../components/JniFooter'
 import JniAppBar from '../components/JniAppBar'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +24,7 @@ export default function RootLayout({
 					<JniAppBar />
 					{children}
 					<footer>
-						<Footer />
+						<JniFooter />
 					</footer>
 				</body>
 			</ThemeRegistry>

@@ -1,6 +1,6 @@
 import { Box, Link, Typography } from '@mui/material';
 
-const Footer = () => {
+const JniFooter = () => {
 	return (
 		<Box sx={{ 
 			bgcolor: 'secondary.main', 
@@ -18,4 +18,4 @@ const Footer = () => {
 	);
 }
 
-export default Footer;
+export default JniFooter;
