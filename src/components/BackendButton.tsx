@@ -27,10 +27,7 @@ const BackendButton = ({ serverAction }: BackenButtonProps) => {
 				sx={jniStyles.redBgHoverTransition}
 			>Call Server
 			</Button>
-			<Backdrop
-				sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-				open={showLoadingBackdrop}
-			>
+			<Backdrop sx={jniStyles.Backdrop} open={showLoadingBackdrop}>
 				<CircularProgress color="inherit" />
 			</Backdrop>
 		</>

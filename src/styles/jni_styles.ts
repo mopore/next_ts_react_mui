@@ -20,6 +20,10 @@ const jniStyles : Record<string, SxProps<Theme> | undefined> = {
 		paddingTop: '1rem',
 		paddingBottom: '1rem',
 	},
+	backdrop : {
+		color: '#fff',
+		zIndex: (theme: Theme) => theme.zIndex.drawer + 1,
+	}
 }
 
 export default jniStyles;

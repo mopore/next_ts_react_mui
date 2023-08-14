@@ -99,10 +99,7 @@ const ExampleForm = ({ formAction }: BackenButtonProps) => {
 				</Grid>
 			</form>
 
-			<Backdrop
-				sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-				open={showLoadingBackdrop}
-			>
+			<Backdrop sx={jniStyles.Backdrop} open={showLoadingBackdrop}>
 				<CircularProgress color="inherit" />
 			</Backdrop>
 		</>
