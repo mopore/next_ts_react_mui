@@ -13,4 +13,4 @@ RUN pnpm run build
 
 EXPOSE 80
 
-CMD ["pnpm", "run", "start", "-p", "80"]
+ENTRYPOINT ["pnpm", "run", "start", "-p", "80"]
